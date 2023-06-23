@@ -3,6 +3,7 @@
 //
 #include <iostream>
 #include "menu.h"
+#include "functions.h"
 
 int main(){
 
@@ -27,10 +28,11 @@ int main(){
                  "   Actinide   |Ac |Th |Pa | U |Np |Pu |Am |Cm |Bk |Cf |Es |Fm |Md |No |Lw |\n"
                  "              -------------------------------------------------------------" << std::endl;
 
+    // creates objects of class Element in vector 'elements'
+    create_element_objects();
+
     // switch function that runs the main menu
     mainMenu();
-
-
 
     return 0;
 }

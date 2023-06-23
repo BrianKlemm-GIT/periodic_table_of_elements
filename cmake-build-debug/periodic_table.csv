@@ -1,4 +1,4 @@
-Name, Symbol, Atomic_Number, Atomic_Weight, Melting_Point, Boiling_Point, Atomic_Radius, Specific_Heat, Electronic_Configuration
+Name,Symbol,Atomic_Number,Atomic_Weight,Melting_Point,Boiling_Point,Atomic_Radius,Specific_Heat,Electronic_Configuration
 Hydrogen, H,1,1.00794,14.01,20.28,79,14.267 (H-H),1s¹
 Helium, He,2,4.002602,0.95,4.216,0,5.188,1s²
 Lithium, Li,3,6.941,553.69,1118.15,155,3.489,[He]2s¹

@@ -5,6 +5,19 @@
 #ifndef PERIODIC_TABLE_OF_ELEMENTS_CLASSES_H
 #define PERIODIC_TABLE_OF_ELEMENTS_CLASSES_H
 
+#include <string>
 
+class Element {
+public:
+    std::string name;
+    std::string symbol;
+    int atomic_number;
+    float atomic_weight;
+    float melting_point;
+    float boiling_point;
+    std:: string atomic_radius;
+    std:: string specific_heat;
+    std::string electronic_configuration;
+};
 
 #endif //PERIODIC_TABLE_OF_ELEMENTS_CLASSES_H
