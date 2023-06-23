@@ -61,6 +61,18 @@ build CMakeFiles/periodic_table_of_elements.dir/menu.cpp.o: CXX_COMPILER__period
   OBJECT_DIR = CMakeFiles/periodic_table_of_elements.dir
   OBJECT_FILE_DIR = CMakeFiles/periodic_table_of_elements.dir
 
+build CMakeFiles/periodic_table_of_elements.dir/functions.cpp.o: CXX_COMPILER__periodic_table_of_elements_Debug /Users/brianklemm/SynologyDrive/Git/max_mac/periodic_table_of_elements/functions.cpp || cmake_object_order_depends_target_periodic_table_of_elements
+  DEP_FILE = CMakeFiles/periodic_table_of_elements.dir/functions.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/periodic_table_of_elements.dir
+  OBJECT_FILE_DIR = CMakeFiles/periodic_table_of_elements.dir
+
+build CMakeFiles/periodic_table_of_elements.dir/classes.cpp.o: CXX_COMPILER__periodic_table_of_elements_Debug /Users/brianklemm/SynologyDrive/Git/max_mac/periodic_table_of_elements/classes.cpp || cmake_object_order_depends_target_periodic_table_of_elements
+  DEP_FILE = CMakeFiles/periodic_table_of_elements.dir/classes.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/periodic_table_of_elements.dir
+  OBJECT_FILE_DIR = CMakeFiles/periodic_table_of_elements.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target periodic_table_of_elements
@@ -69,7 +81,7 @@ build CMakeFiles/periodic_table_of_elements.dir/menu.cpp.o: CXX_COMPILER__period
 #############################################
 # Link the executable periodic_table_of_elements
 
-build periodic_table_of_elements: CXX_EXECUTABLE_LINKER__periodic_table_of_elements_Debug CMakeFiles/periodic_table_of_elements.dir/main.cpp.o CMakeFiles/periodic_table_of_elements.dir/menu.cpp.o
+build periodic_table_of_elements: CXX_EXECUTABLE_LINKER__periodic_table_of_elements_Debug CMakeFiles/periodic_table_of_elements.dir/main.cpp.o CMakeFiles/periodic_table_of_elements.dir/menu.cpp.o CMakeFiles/periodic_table_of_elements.dir/functions.cpp.o CMakeFiles/periodic_table_of_elements.dir/classes.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/periodic_table_of_elements.dir
   POST_BUILD = :

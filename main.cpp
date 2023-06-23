@@ -27,7 +27,10 @@ int main(){
                  "   Actinide   |Ac |Th |Pa | U |Np |Pu |Am |Cm |Bk |Cf |Es |Fm |Md |No |Lw |\n"
                  "              -------------------------------------------------------------" << std::endl;
 
+    // switch function that runs the main menu
     mainMenu();
+
+
 
     return 0;
 }

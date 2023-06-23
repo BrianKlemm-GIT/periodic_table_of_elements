@@ -1,6 +1,4 @@
 # ninja log v5
-0	292	1687535443233744547	CMakeFiles/periodic_table_of_elements.dir/main.cpp.o	26c96ffac11e4894
-294	330	1687535443273164174	periodic_table_of_elements	b2bb7025918b958d
 7	296	1687537255974929710	CMakeFiles/periodic_table_of_elements.dir/main.cpp.o	26c96ffac11e4894
-7	296	1687537255975214874	CMakeFiles/periodic_table_of_elements.dir/menu.cpp.o	93ce208adab6376b
 296	335	1687537256016951873	periodic_table_of_elements	4424d78fd21b52fa
+7	296	1687537255975214874	CMakeFiles/periodic_table_of_elements.dir/menu.cpp.o	93ce208adab6376b
