@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "menu.h"
+#include <limits>
 
 void mainMenu(){
     bool keep_open = true;
@@ -18,9 +19,10 @@ void mainMenu(){
         short user_menu_choice;
         std::cin >> user_menu_choice;
 
+        // Clears the fail state and ignores remaining characters in the input stream
         if (std::cin.fail()) {
-            std::cin.clear(); // Clear the fail state
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignore remaining characters in the input stream
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "Invalid input. Please enter a valid number."
                          " Valid selections are numeric and do not include a '.'." << std::endl;
             continue;

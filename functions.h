@@ -6,5 +6,6 @@
 #define PERIODIC_TABLE_OF_ELEMENTS_FUNCTIONS_H
 
 void create_element_objects();
+int lookup_index_via_symbol(const std::string& symbol, const std::vector<Element>& elements);
 
 #endif //PERIODIC_TABLE_OF_ELEMENTS_FUNCTIONS_H

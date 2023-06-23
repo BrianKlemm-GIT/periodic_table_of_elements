@@ -36,8 +36,16 @@ void create_element_objects() {
         elements.push_back(e);
     }
 
-    // Print data to test if it works correctly
-    for (const Element &element : elements) {
-        std::cout << "Name: " << element.name << ", Symbol: " << element.symbol << std::endl;
+//    // Print data to test if it works correctly
+//    for (const Element &element : elements) {
+//        std::cout << "Name: " << element.name << ", Symbol: " << element.symbol << std::endl;
+//    }
+}
+
+int lookup_index_via_symbol(const std::string& symbol, const std::vector<Element>& elements){
+    for (int i = 0; i < elements.size(); ++i) {
+        if (elements[i].symbol == symbol) {
+            return i;
+        }
     }
 }
