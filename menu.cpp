@@ -18,7 +18,8 @@ void mainMenu(const std::vector<Element>& elements){
         std::cout << "1. Select an Element" << std::endl;
         std::cout << "2. View a Random Element" << std::endl;
         std::cout << "3. Test Your Knowledge" << std::endl;
-        std::cout << "4. Exit Program" << std::endl;
+        std::cout << "4. Display the Periodic Table" << std::endl;
+        std::cout << "5. Exit Program" << std::endl;
         std::cout << "-------------------------------------" << std::endl;
 
         short user_menu_choice;
@@ -38,7 +39,12 @@ void mainMenu(const std::vector<Element>& elements){
                 std::cout << "Enter the symbol of the element: ";
                 std::cin >> symbol;
                 int index = lookup_index_via_symbol(symbol, elements);
-                print_element_info(index, elements);
+                if (index != -1) {
+                    elements[index].print_element_info();
+                } else {
+                    std::cout << "Element not found, please enter a valid element symbol. They are "
+                                 "case sensitive" << std::endl;
+                }
                 break;
             }
             case 2:{
@@ -50,6 +56,10 @@ void mainMenu(const std::vector<Element>& elements){
                 break;
             }
             case 4:{
+                display_periodic_table();
+                break;
+            }
+            case 5:{
                 keep_open = false;
                 break;
             }

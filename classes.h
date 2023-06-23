@@ -12,12 +12,13 @@ public:
     std::string name;
     std::string symbol;
     int atomic_number;
-    std::string atomic_weight;
+    float atomic_weight;
     float melting_point;
     float boiling_point;
     std::string atomic_radius;
     std::string specific_heat;
-    std::string electronic_configuration;
+
+    void print_element_info() const;
 };
 
 #endif //PERIODIC_TABLE_OF_ELEMENTS_CLASSES_H

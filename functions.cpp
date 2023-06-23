@@ -7,6 +7,30 @@
 #include <vector>
 #include <iostream>
 
+void display_periodic_table(){
+    std::cout << "  -----             The Periodic Table of Elements                    -----\n"
+                 "1 | H |                                                               |He |\n"
+                 "  |---+----                                       --------------------+---|\n"
+                 "2 |Li |Be |                                       | B | C | N | O | F |Ne |\n"
+                 "  |---+---|                                       |---+---+---+---+---+---|\n"
+                 "3 |Na |Mg |3B  4B  5B  6B  7B |    8B     |1B  2B |Al |Si | P | S |Cl |Ar |\n"
+                 "  |---+---+---------------------------------------+---+---+---+---+---+---|\n"
+                 "4 | K |Ca |Sc |Ti | V |Cr |Mn |Fe |Co |Ni |Cu |Zn |Ga |Ge |As |Se |Br |Kr |\n"
+                 "  |---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---|\n"
+                 "5 |Rb |Sr | Y |Zr |Nb |Mo |Tc |Ru |Rh |Pd |Ag |Cd |In |Sn |Sb |Te | I |Xe |\n"
+                 "  |---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---|\n"
+                 "6 |Cs |Ba |LAN|Hf |Ta | W |Re |Os |Ir |Pt |Au |Hg |Tl |Pb |Bi |Po |At |Rn |\n"
+                 "  |---+---+---+------------------------------------------------------------\n"
+                 "7 |Fr |Ra |ACT|\n"
+                 "  -------------\n"
+                 "              -------------------------------------------------------------\n"
+                 "   Lanthanide |La |Ce |Pr |Nd |Pm |Sm |Eu |Gd |Tb |Dy |Ho |Er |Tm |Yb |Lu |\n"
+                 "              |---+---+---+---+---+---+---+---+---+---+---+---+---+---+---|\n"
+                 "   Actinide   |Ac |Th |Pa | U |Np |Pu |Am |Cm |Bk |Cf |Es |Fm |Md |No |Lw |\n"
+                 "              -------------------------------------------------------------" << std::endl;
+
+}
+
 std::vector<Element> create_element_objects() {
     std::vector<Element> elements;
     rapidcsv::Document doc("periodic_table.csv", rapidcsv::LabelParams(0, -1));
@@ -19,7 +43,6 @@ std::vector<Element> create_element_objects() {
     std::vector<float> boiling_points = doc.GetColumn<float>("Boiling_Point");
     std::vector<std::string> atomic_radii = doc.GetColumn<std::string>("Atomic_Radius");
     std::vector<std::string> specific_heats = doc.GetColumn<std::string>("Specific_Heat");
-    std::vector<std::string> electronic_configurations = doc.GetColumn<std::string>("Electronic_Configuration");
 
     for(size_t i = 0; i < names.size(); ++i) {
         Element e;
@@ -31,9 +54,6 @@ std::vector<Element> create_element_objects() {
         e.boiling_point = boiling_points[i];
         e.atomic_radius = atomic_radii[i];
         e.specific_heat = specific_heats[i];
-        e.electronic_configuration = electronic_configurations[i];
-
-        std::cout << "Creating element: " << e.name << ", " << e.symbol << std::endl;
         elements.push_back(e);
     }
 
@@ -47,21 +67,4 @@ int lookup_index_via_symbol(const std::string& symbol, const std::vector<Element
         }
     }
     return -1; // Return -1 when no matching element is found
-}
-
-void print_element_info(int symbol_index, const std::vector<Element>& elements){
-    if (symbol_index == -1) {
-        std::cout << "Please enter a valid symbol from the periodic table." << std::endl;
-        return;
-    }
-
-    std::cout << elements[symbol_index].symbol << " has the following attributes." << std::endl;
-    std::cout << "Name: " << elements[symbol_index].name << std::endl;
-    std::cout << "Atomic number: " << elements[symbol_index].atomic_number << std::endl;
-    std::cout << "Atomic radius: " << elements[symbol_index].atomic_radius << std::endl;
-    std::cout << "Atomic weight: " << elements[symbol_index].atomic_weight << std::endl;
-    std::cout << "Boiling Point: " << elements[symbol_index].boiling_point << std::endl;
-    std::cout << "Melting Point: " << elements[symbol_index].melting_point << std::endl;
-    std::cout << "Specific Heat: " << elements[symbol_index].specific_heat << std::endl;
-    std::cout << "Electronic Configuration:" << elements[symbol_index].electronic_configuration << std::endl;
 }
