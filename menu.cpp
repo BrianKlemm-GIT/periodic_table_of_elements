@@ -3,11 +3,16 @@
 //
 
 #include <iostream>
-#include "menu.h"
 #include <limits>
+#include "menu.h"
+#include "functions.h"
+#include "vector"
+#include "classes.h"
 
-void mainMenu(){
+
+void mainMenu(const std::vector<Element>& elements){
     bool keep_open = true;
+    std::string symbol;
     do{
         std::cout << "\n-------------Main Menu---------------" << std::endl;
         std::cout << "1. Select an Element" << std::endl;
@@ -30,7 +35,10 @@ void mainMenu(){
 
         switch(user_menu_choice){
             case 1: {
-                std::cout << "1. Select an element";
+                std::cout << "Enter the symbol of the element: ";
+                std::cin >> symbol;
+                int index = lookup_index_via_symbol(symbol, elements);
+                print_element_info(index, elements);
                 break;
             }
             case 2:{

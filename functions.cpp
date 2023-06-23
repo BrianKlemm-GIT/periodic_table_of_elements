@@ -1,14 +1,13 @@
 //
 // Created by Brian Klemm on 6/23/23.
 //
-
 #include "functions.h"
 #include "classes.h"
 #include "rapidcsv.h"
 #include <vector>
 #include <iostream>
 
-void create_element_objects() {
+std::vector<Element> create_element_objects() {
     std::vector<Element> elements;
     rapidcsv::Document doc("periodic_table.csv", rapidcsv::LabelParams(0, -1));
 
@@ -33,14 +32,13 @@ void create_element_objects() {
         e.atomic_radius = atomic_radii[i];
         e.specific_heat = specific_heats[i];
         e.electronic_configuration = electronic_configurations[i];
+
+        std::cout << "Creating element: " << e.name << ", " << e.symbol << std::endl;
         elements.push_back(e);
     }
 
-//    // Print data to test if it works correctly
-//    for (const Element &element : elements) {
-//        std::cout << "Name: " << element.name << ", Symbol: " << element.symbol << std::endl;
-//    }
-}
+    return elements;
+    }
 
 int lookup_index_via_symbol(const std::string& symbol, const std::vector<Element>& elements){
     for (int i = 0; i < elements.size(); ++i) {
@@ -48,4 +46,22 @@ int lookup_index_via_symbol(const std::string& symbol, const std::vector<Element
             return i;
         }
     }
+    return -1; // Return -1 when no matching element is found
+}
+
+void print_element_info(int symbol_index, const std::vector<Element>& elements){
+    if (symbol_index == -1) {
+        std::cout << "Please enter a valid symbol from the periodic table." << std::endl;
+        return;
+    }
+
+    std::cout << elements[symbol_index].symbol << " has the following attributes." << std::endl;
+    std::cout << "Name: " << elements[symbol_index].name << std::endl;
+    std::cout << "Atomic number: " << elements[symbol_index].atomic_number << std::endl;
+    std::cout << "Atomic radius: " << elements[symbol_index].atomic_radius << std::endl;
+    std::cout << "Atomic weight: " << elements[symbol_index].atomic_weight << std::endl;
+    std::cout << "Boiling Point: " << elements[symbol_index].boiling_point << std::endl;
+    std::cout << "Melting Point: " << elements[symbol_index].melting_point << std::endl;
+    std::cout << "Specific Heat: " << elements[symbol_index].specific_heat << std::endl;
+    std::cout << "Electronic Configuration:" << elements[symbol_index].electronic_configuration << std::endl;
 }

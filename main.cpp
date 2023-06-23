@@ -28,11 +28,12 @@ int main(){
                  "   Actinide   |Ac |Th |Pa | U |Np |Pu |Am |Cm |Bk |Cf |Es |Fm |Md |No |Lw |\n"
                  "              -------------------------------------------------------------" << std::endl;
 
-    // creates objects of class Element in vector 'elements'
-    create_element_objects();
 
+
+    // creates objects of class Element in vector 'elements'
     // switch function that runs the main menu
-    mainMenu();
+    std::vector<Element> elements = create_element_objects();
+    mainMenu(elements);
 
     return 0;
 }
