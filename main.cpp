@@ -2,6 +2,7 @@
 // Created by Brian Klemm on 6/23/23.
 //
 #include <iostream>
+#include "menu.h"
 
 int main(){
 
@@ -26,6 +27,9 @@ int main(){
                  "   Actinide   |Ac |Th |Pa | U |Np |Pu |Am |Cm |Bk |Cf |Es |Fm |Md |No |Lw |\n"
                  "              -------------------------------------------------------------" << std::endl;
 
+    mainMenu();
+
+    return 0;
 }
 
 
