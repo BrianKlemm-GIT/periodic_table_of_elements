@@ -1,0 +1,3 @@
+/Users/brianklemm/SynologyDrive/Git/max_mac/periodic_table_of_elements/cmake-build-debug/CMakeFiles/periodic_table_of_elements.dir
+/Users/brianklemm/SynologyDrive/Git/max_mac/periodic_table_of_elements/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/brianklemm/SynologyDrive/Git/max_mac/periodic_table_of_elements/cmake-build-debug/CMakeFiles/rebuild_cache.dir
