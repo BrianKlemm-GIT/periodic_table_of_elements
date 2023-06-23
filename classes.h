@@ -12,11 +12,11 @@ public:
     std::string name;
     std::string symbol;
     int atomic_number;
-    float atomic_weight;
+    std::string atomic_weight;
     float melting_point;
     float boiling_point;
-    std:: string atomic_radius;
-    std:: string specific_heat;
+    std::string atomic_radius;
+    std::string specific_heat;
     std::string electronic_configuration;
 };
 
