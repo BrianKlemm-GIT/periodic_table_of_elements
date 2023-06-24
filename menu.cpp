@@ -48,7 +48,7 @@ void mainMenu(const std::vector<Element>& elements){
                 break;
             }
             case 2:{
-                std::cout << "2. View a random element";
+                elements[random_number_generator(0, 118)].print_element_info();
                 break;
             }
             case 3:{

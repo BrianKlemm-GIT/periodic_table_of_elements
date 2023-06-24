@@ -14,6 +14,7 @@
 void display_periodic_table();
 std::vector<Element> create_element_objects();
 int lookup_index_via_symbol(const std::string& symbol, const std::vector<Element>& elements);
+int random_number_generator(int first_in_range, int last_in_range);
 
 
 #endif //PERIODIC_TABLE_OF_ELEMENTS_FUNCTIONS_H

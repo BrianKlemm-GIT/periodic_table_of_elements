@@ -6,6 +6,7 @@
 #include "rapidcsv.h"
 #include <vector>
 #include <iostream>
+#include <random>
 
 void display_periodic_table(){
     std::cout << "  -----             The Periodic Table of Elements                    -----\n"
@@ -67,4 +68,16 @@ int lookup_index_via_symbol(const std::string& symbol, const std::vector<Element
         }
     }
     return -1; // Return -1 when no matching element is found
+}
+
+int random_number_generator(int first_in_range, int last_in_range){
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> distrib(first_in_range, last_in_range);
+
+    return distrib(gen);
+}
+
+void random_element_selector(){
+
 }
