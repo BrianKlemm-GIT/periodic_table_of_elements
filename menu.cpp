@@ -4,12 +4,15 @@
 
 #include <iostream>
 #include <limits>
+#include <chrono>
+#include <thread>
 #include "menu.h"
 #include "functions.h"
 #include "vector"
 #include "classes.h"
 
 
+// mainMenu houses the program and runs the functions and methods when appropriate
 void mainMenu(const std::vector<Element>& elements){
     bool keep_open = true;
     std::string symbol;
@@ -36,27 +39,19 @@ void mainMenu(const std::vector<Element>& elements){
 
         switch(user_menu_choice){
             case 1: {
-                std::cout << "Enter the symbol of the element: ";
-                std::cin >> symbol;
-                int index = lookup_index_via_symbol(symbol, elements);
-                if (index != -1) {
-                    elements[index].print_element_info();
-                } else {
-                    std::cout << "Element not found, please enter a valid element symbol. They are "
-                                 "case sensitive" << std::endl;
-                }
+                elementLookUpTool(elements);
                 break;
             }
             case 2:{
-                elements[random_number_generator(0, 118)].print_element_info();
+                elements[randomNumberGenerator(0, 118)].printElementInfo();
                 break;
             }
             case 3:{
-                std::cout << "3. Test your knowledge";
+                atomicNumberQuiz(elements);
                 break;
             }
             case 4:{
-                display_periodic_table();
+                displayPeriodicTable();
                 break;
             }
             case 5:{
@@ -68,6 +63,6 @@ void mainMenu(const std::vector<Element>& elements){
                              " Valid selections are numeric and do not include a '.'." << std::endl;
             }
         }
-
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     }while(keep_open);
 }

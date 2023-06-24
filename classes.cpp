@@ -5,7 +5,8 @@
 #include "classes.h"
 #include <iostream>
 
-void Element::print_element_info() const{
+// method utilized in the class Element
+void Element::printElementInfo() const{
     std::cout << this->symbol << " has the following attributes." << std::endl;
     std::cout << "Name: " << this->name << std::endl;
     std::cout << "Atomic number: " << this->atomic_number << std::endl;

@@ -348,6 +348,14 @@ CMakeFiles/periodic_table_of_elements.dir/functions.cpp.obj
  C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_tree.h
  C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_map.h
  C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_multimap.h
+ C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/random
+ C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/random.h
+ C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h
+ C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/random.tcc
+ C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/numeric
+ C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_numeric.h
+ C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bit
+ C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/glue_numeric_defs.h
 
 CMakeFiles/periodic_table_of_elements.dir/main.cpp.obj
  C:/Users/Brian/SynologyDrive/Git/desktop/periodic_table_of_elements/main.cpp
@@ -558,6 +566,12 @@ CMakeFiles/periodic_table_of_elements.dir/main.cpp.obj
  C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_tree.h
  C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_map.h
  C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_multimap.h
+ C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/chrono
+ C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio
+ C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/parse_numbers.h
+ C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/thread
+ C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_thread.h
+ C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/this_thread_sleep.h
 
 CMakeFiles/periodic_table_of_elements.dir/menu.cpp.obj
  C:/Users/Brian/SynologyDrive/Git/desktop/periodic_table_of_elements/menu.cpp

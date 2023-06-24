@@ -10,13 +10,13 @@
 int main(){
 
     // displays the periodic table as a reference for the user.
-    display_periodic_table();
+    displayPeriodicTable();
 
     // pauses the screen for .75 seconds so if the user's screen is small they will notice the period table.
     std::this_thread::sleep_for(std::chrono::milliseconds(750));
 
     // creates objects of class Element in vector 'elements'
-    std::vector<Element> elements = create_element_objects();
+    std::vector<Element> elements = createElementObjects();
 
     // switch function that runs the main menu
     mainMenu(elements);

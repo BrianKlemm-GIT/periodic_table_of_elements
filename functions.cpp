@@ -8,7 +8,8 @@
 #include <iostream>
 #include <random>
 
-void display_periodic_table(){
+// Displaying the periodic table happens both automatically and when the user prompts display from the main menu
+void displayPeriodicTable(){
     std::cout << "  -----             The Periodic Table of Elements                    -----\n"
                  "1 | H |                                                               |He |\n"
                  "  |---+----                                       --------------------+---|\n"
@@ -32,7 +33,8 @@ void display_periodic_table(){
 
 }
 
-std::vector<Element> create_element_objects() {
+// creates elements vector of objects of class Element from data found in periodic_table.csv using rapidcsv.h
+std::vector<Element> createElementObjects() {
     std::vector<Element> elements;
     rapidcsv::Document doc("periodic_table.csv", rapidcsv::LabelParams(0, -1));
 
@@ -61,7 +63,20 @@ std::vector<Element> create_element_objects() {
     return elements;
     }
 
-int lookup_index_via_symbol(const std::string& symbol, const std::vector<Element>& elements){
+// This is menu option 1 and allows the user to look up an element from vector elements.
+void elementLookUpTool(const std::vector<Element>& elements){
+    std::string user_symbol;
+    std::cout << "Enter the symbol of the element: ";
+    std::cin >> user_symbol;
+    int index = lookUpIndexViaSymbol(user_symbol, elements);
+    if (index != -1)
+        elements[index].printElementInfo();
+    else
+        std::cout << "Element not found, please enter a valid element symbol. They are "
+                     "case sensitive" << std::endl;
+    }
+// Function is necessary for the elementLookUpTool. It finds the index of the element the user wants to lookup.
+int lookUpIndexViaSymbol(const std::string& symbol, const std::vector<Element>& elements){
     for (int i = 0; i < elements.size(); ++i) {
         if (elements[i].symbol == symbol) {
             return i;
@@ -70,7 +85,9 @@ int lookup_index_via_symbol(const std::string& symbol, const std::vector<Element
     return -1; // Return -1 when no matching element is found
 }
 
-int random_number_generator(int first_in_range, int last_in_range){
+// generates a random number using random_device seed, mt19937 engine and range limiter uniform_int_distribution.
+// take two arguments to determine the range
+int randomNumberGenerator(int first_in_range, int last_in_range){
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> distrib(first_in_range, last_in_range);
@@ -78,6 +95,17 @@ int random_number_generator(int first_in_range, int last_in_range){
     return distrib(gen);
 }
 
-void random_element_selector(){
-
+// quiz uses randomNumberGenerator() to select an index and compares the user answer to the element at that index
+void atomicNumberQuiz(const std::vector<Element>& elements){
+    int random_element_index = randomNumberGenerator(0, 118);
+    std::cout << "What is the atomic number of " <<
+              elements[random_element_index].symbol << " also known as " <<
+              elements[random_element_index].name << "?" << std::endl;
+    int user_answer;
+    std::cin >> user_answer;
+    if(user_answer == elements[random_element_index].atomic_number)
+        std::cout << "You got it correct. That is actually pretty remarkable. Well done!" << std::endl;
+    else
+        std::cout << "Incorrect, the correct answer is " << elements[random_element_index].atomic_number <<
+                  "." << std::endl;
 }
